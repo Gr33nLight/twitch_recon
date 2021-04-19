@@ -6,7 +6,8 @@ const vodSync = (req, res) => {
     const { timestamp, channel } = req.body;
 
     return syncVodTo(id, timestamp, channel, (vodinfo) => {
-      if (vodinfo?.data && vodinfo?.data.length > 0) {
+      // console.log(vodinfo);
+      if (vodinfo && vodinfo?.url) {
         res.status(200).json({ vodinfo });
       } else {
         res.status(400).json({ message: 'Unkown error occurred' });

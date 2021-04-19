@@ -1,12 +1,12 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { useState } from 'react';
-import { Input, Button } from '@chakra-ui/react';
+import { Input, Button, Link } from '@chakra-ui/react';
 
 export default function Home() {
   const [vodUrl, setVodUrl] = useState('');
   const [channel, setChannel] = useState('');
-
+  const [vodResult, setVodResult] = useState('');
   const sendReq = async () => {
     const duration = String.raw`(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)`;
     const vId = String.raw`\d\d\d\d\d\d\d\d\d`;
@@ -29,8 +29,8 @@ export default function Home() {
         body: JSON.stringify({ timestamp: seconds, channel }), // body data type must match "Content-Type" header
       });
 
-      const vodInfo = await res.json();
-      console.log(vodInfo);
+      const vodSync = await res.json();
+      setVodResult(vodSync?.vodinfo?.url);
     }
   };
 
@@ -49,6 +49,11 @@ export default function Home() {
       <Button colorScheme="blue" onClick={() => sendReq()}>
         Sync VOD
       </Button>
+      {vodResult && (
+        <Link href={vodResult} isExternal>
+          Success! Here is your link to the VOD
+        </Link>
+      )}
     </div>
   );
 }
