@@ -1,5 +1,6 @@
 import { syncVodTo } from '../../../lib';
 
+//TODO: DDOS protection
 const vodSync = (req, res) => {
   if (req.method === 'POST') {
     const { id } = req.query;

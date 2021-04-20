@@ -4,10 +4,8 @@ import { Box } from '@chakra-ui/react';
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div style={{ height: '100v' }}>
       <Nav />
-      <Box m={{ md: '20', sm: '10' }}>Content </Box>
-
       <main>{children}</main>
     </div>
   );
