@@ -1,7 +1,8 @@
 import Head from 'next/head';
 // import styles from '../styles/Home.module.css';
 import { useState } from 'react';
-import { Input, Button, Link, Box, Heading } from '@chakra-ui/react';
+import { Input, Link, Box, IconButton, Icon } from '@chakra-ui/react';
+import { FaSyncAlt } from 'react-icons/fa';
 
 export default function Home() {
   const [vodUrl, setVodUrl] = useState('');
@@ -66,7 +67,7 @@ export default function Home() {
             w={[300, 190, 300]}
             onChange={(e) => setVodUrl(e.target.value)}
           />
-
+          <Box px="5px">Sync to</Box>
           <Box
             fllex="1"
             lineHeight="0"
@@ -80,20 +81,19 @@ export default function Home() {
               w={[300, 180, 290]}
               onChange={(e) => setChannel(e.target.value)}
             />
-            <Button
+            <IconButton
+              colorScheme="blue"
+              aria-label="Sync"
               verticalAlign="baseline"
               height={39}
               margin="0px auto"
               mt={['10px', '0px']}
               colorScheme="red"
-              // display={{ base: 'block', sm: 'initial' }}
               display={['block', 'initial']}
               onClick={() => sendReq()}
-            >
-              Sync VOD
-            </Button>
+              icon={<Icon w="5" h="5" as={FaSyncAlt} />}
+            />
           </Box>
-
           {vodResult && (
             <Link href={vodResult} isExternal>
               Success! Here is your link to the VOD

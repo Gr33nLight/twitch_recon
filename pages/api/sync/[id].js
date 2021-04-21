@@ -1,6 +1,5 @@
 import { syncVodTo } from '../../../lib';
 
-//TODO: DDOS protection
 const vodSync = (req, res) => {
   if (req.method === 'POST') {
     const { id } = req.query;
@@ -9,7 +8,6 @@ const vodSync = (req, res) => {
     return syncVodTo(id, timestamp, channel, (vodinfo) => {
       // console.log(vodinfo);
 
-      //TODO: better error messages (vod not found, incorrect url format...)
       if (vodinfo && vodinfo?.url) {
         res.status(200).json({ vodinfo });
       } else {
