@@ -2,7 +2,7 @@ import Head from 'next/head';
 // import styles from '../styles/Home.module.css';
 import { useState } from 'react';
 import { Input, Link, Box, IconButton, Icon } from '@chakra-ui/react';
-import { FaSyncAlt } from 'react-icons/fa';
+import { FaSyncAlt, FaAngleRight } from 'react-icons/fa';
 
 export default function Home() {
   const [vodUrl, setVodUrl] = useState('');
@@ -56,7 +56,7 @@ export default function Home() {
           px={'0rem'}
           display={'flex'}
           flex="1"
-          flexDirection={['column', 'row', 'row', 'row']}
+          flexDirection={['column', 'row', 'row', 'row', 'row']}
           // flexDirection="column"
           justifyContent={'center'}
           alignItems={'center'}
@@ -67,7 +67,10 @@ export default function Home() {
             w={[300, 190, 300]}
             onChange={(e) => setVodUrl(e.target.value)}
           />
-          <Box px="5px">Sync to</Box>
+          <Box px="5px" display="inline-flex" alignItems="center">
+            Sync To
+            <FaAngleRight style={{ height: '18px', marginLeft: '3px' }} />
+          </Box>
           <Box
             fllex="1"
             lineHeight="0"
