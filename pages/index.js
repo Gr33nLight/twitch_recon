@@ -1,40 +1,20 @@
 import Head from 'next/head';
-// import styles from '../styles/Home.module.css';
 import { useState } from 'react';
-import { Input, Link, Box, IconButton, Icon } from '@chakra-ui/react';
-import { FaSyncAlt, FaAngleRight } from 'react-icons/fa';
+import { Input, Link, Box } from '@chakra-ui/react';
+import ChannelSelect from '../components/ChannelSelect';
+import VodSyncResult from '../components/VodSyncResult';
+import Progress from '../components/Progress';
 
 export default function Home() {
   const [vodUrl, setVodUrl] = useState('');
-  const [channel, setChannel] = useState('');
-  const [vodResult, setVodResult] = useState('');
-  const sendReq = async () => {
-    const duration = String.raw`(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)`;
-    const vId = String.raw`\d\d\d\d\d\d\d\d\d`;
+  const [vodResult, setVodResult] = useState(
+    'verylongtestverylongtestverylongtest'
+  );
+  let resultTxt = 'Sync To';
 
-    const videoWithTimestampRE = new RegExp(`(${vId})(?:\\?t=(${duration}))?`);
-
-    const match = vodUrl.match(videoWithTimestampRE);
-
-    if (match && match.length == 6) {
-      const vod_id = match[1];
-      let seconds =
-        parseInt(match[3]) * 3600 +
-        parseInt(match[4]) * 60 +
-        parseInt(match[5]);
-      const res = await fetch(`/api/sync/${vod_id}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ timestamp: seconds, channel }), // body data type must match "Content-Type" header
-      });
-
-      const vodSync = await res.json();
-      setVodResult(vodSync?.vodinfo?.url);
-    }
-  };
-
+  if (vodResult) {
+    resultTxt = 'Success';
+  }
   return (
     <Box
       minH={'calc(100vh - 60px)'}
@@ -51,13 +31,11 @@ export default function Home() {
           Twitch Recon
         </Box>
         <Box
-          // minH={'calc(100vh - 60px)'}
           py={'0.5rem'}
           px={'0rem'}
           display={'flex'}
           flex="1"
-          flexDirection={['column', 'row', 'row', 'row', 'row']}
-          // flexDirection="column"
+          flexDirection={['column', 'row', 'row', 'row']}
           justifyContent={'center'}
           alignItems={'center'}
         >
@@ -65,42 +43,18 @@ export default function Home() {
             placeholder="Enter VOD URL"
             value={vodUrl}
             w={[300, 190, 300]}
-            onChange={(e) => setVodUrl(e.target.value)}
+            onChange={(e) => {
+              if (vodResult) setVodResult('');
+              setVodUrl(e.target.value);
+            }}
           />
-          <Box px="5px" display="inline-flex" alignItems="center">
-            Sync To
-            <FaAngleRight style={{ height: '18px', marginLeft: '3px' }} />
-          </Box>
-          <Box
-            fllex="1"
-            lineHeight="0"
-            verticalAlign="0"
-            marginTop={['10px', '0px']}
-          >
-            <Input
-              placeholder="Channel name"
-              value={channel}
-              verticalAlign="none"
-              w={[300, 180, 290]}
-              onChange={(e) => setChannel(e.target.value)}
-            />
-            <IconButton
-              colorScheme="blue"
-              aria-label="Sync"
-              verticalAlign="baseline"
-              height={39}
-              margin="0px auto"
-              mt={['10px', '0px']}
-              colorScheme="red"
-              display={['block', 'initial']}
-              onClick={() => sendReq()}
-              icon={<Icon w="5" h="5" as={FaSyncAlt} />}
-            />
-          </Box>
+          <Progress result={vodResult} />
+
+          {!vodResult && (
+            <ChannelSelect vodUrl={vodUrl} setVodResult={setVodResult} />
+          )}
           {vodResult && (
-            <Link href={vodResult} isExternal>
-              Success! Here is your link to the VOD
-            </Link>
+            <VodSyncResult result={vodResult} setVodResult={setVodResult} />
           )}
         </Box>
       </Box>
