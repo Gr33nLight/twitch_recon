@@ -52,7 +52,11 @@ export default function Home() {
             <ChannelSelect vodUrl={vodUrl} setVodResult={setVodResult} />
           )}
           {vodResult && (
-            <VodSyncResult result={vodResult} setVodResult={setVodResult} />
+            <VodSyncResult
+              result={vodResult}
+              setVodResult={setVodResult}
+              setVodUrl={setVodUrl}
+            />
           )}
         </Box>
       </Box>

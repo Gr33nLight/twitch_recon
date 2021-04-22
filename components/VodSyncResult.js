@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, Box, IconButton, Icon, Text } from '@chakra-ui/react';
 import { FaTrashAlt } from 'react-icons/fa';
 
-const VodSyncResult = ({ result, setVodResult }) => {
+const VodSyncResult = ({ result, setVodResult, setVodUrl }) => {
   return (
     <Box padding="10px" bgColor="purple.400" display="inherit">
       <Text fontSize="md" color="gray.200">
@@ -12,7 +12,10 @@ const VodSyncResult = ({ result, setVodResult }) => {
       </Text>
       <Icon
         cursor="pointer"
-        onClick={() => setVodResult('')}
+        onClick={() => {
+          setVodResult('');
+          setVodUrl('');
+        }}
         w="5"
         h="5"
         as={FaTrashAlt}
