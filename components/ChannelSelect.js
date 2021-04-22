@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Input, Box, IconButton, Icon } from '@chakra-ui/react';
 import { FaSyncAlt } from 'react-icons/fa';
+import { ERR_SRC_FORMAT } from '../lib/error_codes';
 
 const ChannelSelect = ({ vodUrl, setVodResult }) => {
   const [channel, setChannel] = useState('');
@@ -16,9 +17,10 @@ const ChannelSelect = ({ vodUrl, setVodResult }) => {
     if (match && match.length == 6) {
       const vod_id = match[1];
       let seconds =
-        parseInt(match[3]) * 3600 +
-        parseInt(match[4]) * 60 +
+        parseInt(match[3] || 0) * 3600 +
+        parseInt(match[4] || 0) * 60 +
         parseInt(match[5]);
+
       const res = await fetch(`/api/sync/${vod_id}`, {
         method: 'POST',
         headers: {
@@ -28,7 +30,13 @@ const ChannelSelect = ({ vodUrl, setVodResult }) => {
       });
 
       const vodSync = await res.json();
-      setVodResult(vodSync?.vodinfo?.url);
+      if (vodSync?.err_code) {
+        alert(vodSync?.err_code);
+      } else {
+        setVodResult(vodSync?.vodinfo?.url);
+      }
+    } else {
+      alert(ERR_SRC_FORMAT);
     }
   };
   return (

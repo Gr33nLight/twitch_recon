@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useState } from 'react';
-import { Input, Link, Box } from '@chakra-ui/react';
+import { Input, Box } from '@chakra-ui/react';
 import ChannelSelect from '../components/ChannelSelect';
 import VodSyncResult from '../components/VodSyncResult';
 import Progress from '../components/Progress';
@@ -10,11 +10,7 @@ export default function Home() {
   const [vodResult, setVodResult] = useState(
     'verylongtestverylongtestverylongtest'
   );
-  let resultTxt = 'Sync To';
 
-  if (vodResult) {
-    resultTxt = 'Success';
-  }
   return (
     <Box
       minH={'calc(100vh - 60px)'}
@@ -30,6 +26,8 @@ export default function Home() {
         >
           Twitch Recon
         </Box>
+
+        {/* Main Search Component */}
         <Box
           py={'0.5rem'}
           px={'0rem'}
