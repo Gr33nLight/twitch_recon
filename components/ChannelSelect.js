@@ -6,7 +6,7 @@ import { en_us } from '../language/en_us';
 const ChannelSelect = ({ vodUrl, setVodResult }) => {
   const [channel, setChannel] = useState('');
   const toast = useToast();
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const sendReq = async () => {
     setLoading(true);
@@ -72,13 +72,14 @@ const ChannelSelect = ({ vodUrl, setVodResult }) => {
         placeholder="Channel name"
         value={channel}
         verticalAlign="none"
-        w={[350, 180, 290]}
+        w={[350, 180, 260]}
         onChange={(e) => setChannel(e.target.value)}
       />
       <IconButton
         aria-label="Sync"
         verticalAlign="baseline"
         height={39}
+        disabled={loading}
         margin="0px auto"
         type="submit"
         mt={['10px', '0px']}
