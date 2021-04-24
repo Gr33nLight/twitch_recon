@@ -7,9 +7,7 @@ import Progress from '../components/Progress';
 
 export default function Home() {
   const [vodUrl, setVodUrl] = useState('');
-  const [vodResult, setVodResult] = useState(
-    'verylongtestverylongtestverylongtest'
-  );
+  const [vodResult, setVodResult] = useState('');
 
   return (
     <Box
