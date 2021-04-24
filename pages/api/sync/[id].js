@@ -1,5 +1,4 @@
 import { syncVodTo } from '../../../lib';
-import { ERR_UNKNOWN } from '../../../lib/error_codes';
 
 const vodSync = (req, res) => {
   if (req.method === 'POST') {
@@ -12,7 +11,7 @@ const vodSync = (req, res) => {
       } else if (vodinfo && vodinfo?.url) {
         res.status(200).json({ success: true, vodinfo });
       } else {
-        res.status(400).json({ success: false, err_code: ERR_UNKNOWN });
+        res.status(400).json({ success: false, err_code: 'ERR_UNKNOWN' });
       }
     });
   }

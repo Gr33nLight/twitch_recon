@@ -21,12 +21,12 @@ import {
   useBreakpointValue,
   useDisclosure,
 } from '@chakra-ui/react';
-import {
-  HamburgerIcon,
-  CloseIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
-} from '@chakra-ui/icons';
+// import {
+//   HamburgerIcon,
+//   CloseIcon,
+//   ChevronDownIcon,
+//   ChevronRightIcon,
+// } from '@chakra-ui/icons';
 
 const Nav = () => {
   const { isOpen, onToggle } = useDisclosure();
@@ -49,14 +49,14 @@ const Nav = () => {
           ml={{ base: -2 }}
           display={{ base: 'flex', md: 'none' }}
         >
-          <IconButton
+          {/* <IconButton
             onClick={onToggle}
             icon={
               isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
             }
             variant={'ghost'}
             aria-label={'Toggle Navigation'}
-          />
+          /> */}
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
           <Text
@@ -208,7 +208,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
           align={'center'}
           flex={1}
         >
-          <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
+          {/* <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} /> */}
         </Flex>
       </Stack>
     </Link>
@@ -250,7 +250,7 @@ const MobileNavItem = ({ label, children, href }) => {
         >
           {label}
         </Text>
-        {children && (
+        {/* {children && (
           <Icon
             as={ChevronDownIcon}
             transition={'all .25s ease-in-out'}
@@ -258,7 +258,7 @@ const MobileNavItem = ({ label, children, href }) => {
             w={6}
             h={6}
           />
-        )}
+        )} */}
       </Flex>
 
       <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Input, Box, IconButton, Icon } from '@chakra-ui/react';
+import { Input, Box, IconButton, Icon, useToast } from '@chakra-ui/react';
 import { FaSyncAlt } from 'react-icons/fa';
-import { ERR_SRC_FORMAT } from '../lib/error_codes';
+import { en_us } from '../language/en_us';
 
 const ChannelSelect = ({ vodUrl, setVodResult }) => {
   const [channel, setChannel] = useState('');
+  const toast = useToast();
 
   const sendReq = async () => {
     const duration = String.raw`(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)`;
@@ -31,12 +32,26 @@ const ChannelSelect = ({ vodUrl, setVodResult }) => {
 
       const vodSync = await res.json();
       if (vodSync?.err_code) {
-        alert(vodSync?.err_code);
+        toast({
+          title: 'Error',
+          description: en_us[vodSync?.err_code],
+          status: 'error',
+          duration: 2000,
+          position: 'top',
+          isClosable: true,
+        });
       } else {
         setVodResult(vodSync?.vodinfo?.url);
       }
     } else {
-      alert(ERR_SRC_FORMAT);
+      toast({
+        title: 'Error',
+        description: en_us['ERR_SRC_FORMAT'],
+        status: 'error',
+        duration: 2000,
+        position: 'top',
+        isClosable: true,
+      });
     }
   };
   return (
