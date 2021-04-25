@@ -10,7 +10,7 @@ export default function Home() {
   const [vodResult, setVodResult] = useState('');
   return (
     <Box
-      minH={'calc(100vh - 60px)'}
+      minH={'85vh'}
       display="flex"
       justifyContent="center"
       flexDirection="column"

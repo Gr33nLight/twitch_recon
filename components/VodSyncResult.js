@@ -4,7 +4,12 @@ import { FaTrashAlt } from 'react-icons/fa';
 
 const VodSyncResult = ({ result, setVodResult, setVodUrl }) => {
   return (
-    <Box padding="10px" bgColor="purple.400" display="inherit">
+    <Box
+      padding="10px"
+      bgColor="purple.400"
+      display="inherit"
+      marginTop={['5px', '0px']}
+    >
       <Text fontSize="md" color="gray.200">
         <Link href={result} isExternal>
           {result.substr(0, 31) + '...'}
