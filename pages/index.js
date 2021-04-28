@@ -4,16 +4,23 @@ import { Input, Box, Flex } from '@chakra-ui/react';
 import ChannelSelect from '../components/ChannelSelect';
 import VodSyncResult from '../components/VodSyncResult';
 import Progress from '../components/Progress';
+import { use100vh } from 'react-div-100vh';
 
 export default function Home() {
   const [vodUrl, setVodUrl] = useState('');
   const [vodResult, setVodResult] = useState('');
+  const height = use100vh();
+
   return (
     <Box
-      minH={'85vh'}
+      height={height}
+      //for use with navbar
+      // height={`calc(${height}px - 60px)`}
       display="flex"
       justifyContent="center"
       flexDirection="column"
+      className="home"
+      pb="100px"
     >
       <Box display="flex" flexDirection="column" justifyContent="center">
         <Box

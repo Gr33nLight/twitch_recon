@@ -6,7 +6,7 @@ const Footer = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Box flexShrink={0}>
+    <Box height="50px" marginTop="-65px">
       <Center>
         <Icon
           as={FaTwitter}
