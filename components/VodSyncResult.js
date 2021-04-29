@@ -7,12 +7,13 @@ const VodSyncResult = ({ result, setVodResult, setVodUrl }) => {
     <Box
       padding="10px"
       bgColor="purple.400"
+      width="300px"
       display="inherit"
       marginTop={['5px', '0px']}
     >
-      <Text fontSize="md" color="gray.200">
+      <Text fontSize="md" color="gray.200" width="100%">
         <Link href={result} isExternal>
-          {result.substr(0, 31) + '...'}
+          {result.substr(0, 31) + (result.length > 31 ? '...' : '')}
         </Link>
       </Text>
       <Icon
