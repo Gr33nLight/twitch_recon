@@ -9,6 +9,7 @@ import { use100vh } from 'react-div-100vh';
 export default function Home() {
   const [vodUrl, setVodUrl] = useState('');
   const [vodResult, setVodResult] = useState('');
+  const [loading, setLoading] = useState();
   const height = use100vh();
 
   return (
@@ -52,10 +53,15 @@ export default function Home() {
                 setVodUrl(e.target.value);
               }}
             />
-            <Progress result={vodResult} />
+            <Progress result={vodResult} loading={loading} />
 
             {!vodResult && (
-              <ChannelSelect vodUrl={vodUrl} setVodResult={setVodResult} />
+              <ChannelSelect
+                vodUrl={vodUrl}
+                setVodResult={setVodResult}
+                loading={loading}
+                setLoading={setLoading}
+              />
             )}
             {vodResult && (
               <VodSyncResult

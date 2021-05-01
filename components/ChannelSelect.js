@@ -3,10 +3,9 @@ import { Input, IconButton, Icon, useToast, Flex } from '@chakra-ui/react';
 import { FaSyncAlt } from 'react-icons/fa';
 import { en_us } from '../language/en_us';
 
-const ChannelSelect = ({ vodUrl, setVodResult }) => {
+const ChannelSelect = ({ vodUrl, setVodResult, loading, setLoading }) => {
   const [channel, setChannel] = useState('');
   const toast = useToast();
-  const [loading, setLoading] = useState(false);
 
   const sendReq = async () => {
     setLoading(true);
