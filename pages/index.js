@@ -46,7 +46,7 @@ export default function Home() {
             <Input
               placeholder="Enter VOD URL"
               value={vodUrl}
-              w={[350, 190, 300]}
+              w={[310, 190, 300]}
               marginBottom={['5px', '0px']}
               onChange={(e) => {
                 if (vodResult) setVodResult('');

@@ -71,7 +71,7 @@ const ChannelSelect = ({ vodUrl, setVodResult, loading, setLoading }) => {
         placeholder="Channel name"
         value={channel}
         verticalAlign="none"
-        w={[350, 180, 260]}
+        w={[310, 180, 260]}
         onChange={(e) => setChannel(e.target.value)}
       />
       <IconButton
