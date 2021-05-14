@@ -1,0 +1,579 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Nav /> renders correctly 1`] = `
+<div
+  className="css-0"
+>
+  <div
+    className="css-8lthux"
+  >
+    <div
+      className="css-1fsntt9"
+    />
+    <div
+      className="css-8k9ono"
+    >
+      <p
+        className="chakra-text css-ra7do5"
+      >
+        Logo
+      </p>
+      <div
+        className="css-nmdqie"
+      >
+        <div
+          className="chakra-stack css-1ss2m3q"
+        >
+          <div
+            className="css-0"
+          >
+            <a
+              aria-controls="popover-content-2"
+              aria-expanded={false}
+              aria-haspopup="dialog"
+              className="chakra-link css-1t6f37y"
+              href="#"
+              id="popover-trigger-2"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Inspiration
+            </a>
+            <div
+              className="chakra-popover__popper css-0"
+              style={
+                Object {
+                  "--popper-arrow-shadow-color": undefined,
+                  "--popper-arrow-size": undefined,
+                  "minWidth": "max-content",
+                  "position": "absolute",
+                  "visibility": "hidden",
+                }
+              }
+            >
+              <section
+                className="chakra-popover__content css-18o08l2"
+                id="popover-content-2"
+                onBlur={[Function]}
+                onKeyDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                role="tooltip"
+                style={
+                  Object {
+                    "opacity": 0,
+                    "transform": "scale(0.95) translateZ(0)",
+                    "transformOrigin": "var(--popper-transform-origin)",
+                    "visibility": "hidden",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="chakra-stack css-n21gh5"
+                >
+                  <a
+                    className="chakra-link css-1pv49ma"
+                    href="#"
+                    role="group"
+                  >
+                    <div
+                      className="chakra-stack css-84zodg"
+                    >
+                      <div
+                        className="css-0"
+                      >
+                        <p
+                          className="chakra-text css-1hb0olr"
+                        >
+                          Explore Design Work
+                        </p>
+                        <p
+                          className="chakra-text css-g5hezf"
+                        >
+                          Trending Design to inspire you
+                        </p>
+                      </div>
+                      <div
+                        className="css-2gz105"
+                      />
+                    </div>
+                  </a>
+                  <a
+                    className="chakra-link css-1pv49ma"
+                    href="#"
+                    role="group"
+                  >
+                    <div
+                      className="chakra-stack css-84zodg"
+                    >
+                      <div
+                        className="css-0"
+                      >
+                        <p
+                          className="chakra-text css-1hb0olr"
+                        >
+                          New & Noteworthy
+                        </p>
+                        <p
+                          className="chakra-text css-g5hezf"
+                        >
+                          Up-and-coming Designers
+                        </p>
+                      </div>
+                      <div
+                        className="css-2gz105"
+                      />
+                    </div>
+                  </a>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div
+            className="css-0"
+          >
+            <a
+              aria-controls="popover-content-4"
+              aria-expanded={false}
+              aria-haspopup="dialog"
+              className="chakra-link css-1t6f37y"
+              href="#"
+              id="popover-trigger-4"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Find Work
+            </a>
+            <div
+              className="chakra-popover__popper css-0"
+              style={
+                Object {
+                  "--popper-arrow-shadow-color": undefined,
+                  "--popper-arrow-size": undefined,
+                  "minWidth": "max-content",
+                  "position": "absolute",
+                  "visibility": "hidden",
+                }
+              }
+            >
+              <section
+                className="chakra-popover__content css-18o08l2"
+                id="popover-content-4"
+                onBlur={[Function]}
+                onKeyDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                role="tooltip"
+                style={
+                  Object {
+                    "opacity": 0,
+                    "transform": "scale(0.95) translateZ(0)",
+                    "transformOrigin": "var(--popper-transform-origin)",
+                    "visibility": "hidden",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  className="chakra-stack css-n21gh5"
+                >
+                  <a
+                    className="chakra-link css-1pv49ma"
+                    href="#"
+                    role="group"
+                  >
+                    <div
+                      className="chakra-stack css-84zodg"
+                    >
+                      <div
+                        className="css-0"
+                      >
+                        <p
+                          className="chakra-text css-1hb0olr"
+                        >
+                          Job Board
+                        </p>
+                        <p
+                          className="chakra-text css-g5hezf"
+                        >
+                          Find your dream design job
+                        </p>
+                      </div>
+                      <div
+                        className="css-2gz105"
+                      />
+                    </div>
+                  </a>
+                  <a
+                    className="chakra-link css-1pv49ma"
+                    href="#"
+                    role="group"
+                  >
+                    <div
+                      className="chakra-stack css-84zodg"
+                    >
+                      <div
+                        className="css-0"
+                      >
+                        <p
+                          className="chakra-text css-1hb0olr"
+                        >
+                          Freelance Projects
+                        </p>
+                        <p
+                          className="chakra-text css-g5hezf"
+                        >
+                          An exclusive list for contract work
+                        </p>
+                      </div>
+                      <div
+                        className="css-2gz105"
+                      />
+                    </div>
+                  </a>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div
+            className="css-0"
+          >
+            <a
+              aria-controls="popover-content-6"
+              aria-expanded={false}
+              aria-haspopup="dialog"
+              className="chakra-link css-1t6f37y"
+              href="#"
+              id="popover-trigger-6"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Learn Design
+            </a>
+          </div>
+          <div
+            className="css-0"
+          >
+            <a
+              aria-controls="popover-content-8"
+              aria-expanded={false}
+              aria-haspopup="dialog"
+              className="chakra-link css-1t6f37y"
+              href="#"
+              id="popover-trigger-8"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              Hire Designers
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="chakra-stack css-18njwrs"
+    >
+      <a
+        className="chakra-button css-bdth4v"
+        href="#"
+      >
+        Sign In
+      </a>
+      <button
+        className="chakra-button css-1vdaw2s"
+        href="#"
+        type="button"
+      >
+        Sign Up
+      </button>
+    </div>
+    <div
+      className="css-70qvj9"
+    >
+      <button
+        aria-controls="menu-list-13"
+        aria-expanded={false}
+        aria-haspopup="menu"
+        className="chakra-button chakra-menu__menu-button css-1nyg99m"
+        id="menu-button-13"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        type="button"
+      >
+        <span
+          className="css-xl71ch"
+        >
+          <span
+            className="chakra-avatar css-1ruhx4w"
+          >
+            <svg
+              aria-label=" avatar"
+              className="chakra-avatar__svg css-16ite8i"
+              role="img"
+              viewBox="0 0 128 128"
+            >
+              <path
+                d="M103,102.1388 C93.094,111.92 79.3504,118 64.1638,118 C48.8056,118 34.9294,111.768 25,101.7892 L25,95.2 C25,86.8096 31.981,80 40.6,80 L87.4,80 C96.019,80 103,86.8096 103,95.2 L103,102.1388 Z"
+                fill="currentColor"
+              />
+              <path
+                d="M63.9961647,24 C51.2938136,24 41,34.2938136 41,46.9961647 C41,59.7061864 51.2938136,70 63.9961647,70 C76.6985159,70 87,59.7061864 87,46.9961647 C87,34.2938136 76.6985159,24 63.9961647,24"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </button>
+      <div
+        className="css-0"
+        style={
+          Object {
+            "minWidth": "max-content",
+            "position": "absolute",
+            "visibility": "hidden",
+          }
+        }
+      >
+        <div
+          aria-orientation="vertical"
+          className="chakra-menu__menu-list css-1jj07fx"
+          id="menu-list-13"
+          onKeyDown={[Function]}
+          role="menu"
+          style={
+            Object {
+              "opacity": 0,
+              "transform": "scale(0.8) translateZ(0)",
+              "transformOrigin": "var(--popper-transform-origin)",
+              "visibility": "hidden",
+            }
+          }
+          tabIndex={-1}
+        >
+          <button
+            className="chakra-menu__menuitem css-13gp3ta"
+            id="menu-list-13-menuitem-9"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            role="menuitem"
+            tabIndex={0}
+            type="button"
+          >
+            Link 1
+          </button>
+          <button
+            className="chakra-menu__menuitem css-13gp3ta"
+            id="menu-list-13-menuitem-10"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            role="menuitem"
+            tabIndex={0}
+            type="button"
+          >
+            Link 2
+          </button>
+          <hr
+            aria-orientation="horizontal"
+            className="chakra-menu__divider css-0"
+            role="separator"
+          />
+          <button
+            className="chakra-menu__menuitem css-13gp3ta"
+            id="menu-list-13-menuitem-11"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            role="menuitem"
+            tabIndex={0}
+            type="button"
+          >
+            Link 3
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="chakra-collapse"
+    style={
+      Object {
+        "display": "none",
+        "height": "0px",
+        "opacity": 0,
+        "overflow": "hidden",
+      }
+    }
+  >
+    <div
+      className="chakra-stack css-tm2a1"
+    >
+      <div
+        className="chakra-stack css-17kdbol"
+        onClick={[Function]}
+      >
+        <a
+          className="chakra-link css-q4j97j"
+          href="#"
+        >
+          <p
+            className="chakra-text css-y33gq0"
+          >
+            Inspiration
+          </p>
+        </a>
+        <div
+          className="chakra-collapse"
+          style={
+            Object {
+              "display": "none",
+              "height": "0px",
+              "marginTop": "0!important",
+              "opacity": 0,
+              "overflow": "hidden",
+            }
+          }
+        >
+          <div
+            className="chakra-stack css-khmogt"
+          >
+            <a
+              className="chakra-link css-o5g2qp"
+              href="#"
+            >
+              Explore Design Work
+            </a>
+            <a
+              className="chakra-link css-o5g2qp"
+              href="#"
+            >
+              New & Noteworthy
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="chakra-stack css-17kdbol"
+        onClick={[Function]}
+      >
+        <a
+          className="chakra-link css-q4j97j"
+          href="#"
+        >
+          <p
+            className="chakra-text css-y33gq0"
+          >
+            Find Work
+          </p>
+        </a>
+        <div
+          className="chakra-collapse"
+          style={
+            Object {
+              "display": "none",
+              "height": "0px",
+              "marginTop": "0!important",
+              "opacity": 0,
+              "overflow": "hidden",
+            }
+          }
+        >
+          <div
+            className="chakra-stack css-khmogt"
+          >
+            <a
+              className="chakra-link css-o5g2qp"
+              href="#"
+            >
+              Job Board
+            </a>
+            <a
+              className="chakra-link css-o5g2qp"
+              href="#"
+            >
+              Freelance Projects
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="chakra-stack css-17kdbol"
+      >
+        <a
+          className="chakra-link css-q4j97j"
+          href="#"
+        >
+          <p
+            className="chakra-text css-y33gq0"
+          >
+            Learn Design
+          </p>
+        </a>
+        <div
+          className="chakra-collapse"
+          style={
+            Object {
+              "display": "none",
+              "height": "0px",
+              "marginTop": "0!important",
+              "opacity": 0,
+              "overflow": "hidden",
+            }
+          }
+        >
+          <div
+            className="chakra-stack css-khmogt"
+          />
+        </div>
+      </div>
+      <div
+        className="chakra-stack css-17kdbol"
+      >
+        <a
+          className="chakra-link css-q4j97j"
+          href="#"
+        >
+          <p
+            className="chakra-text css-y33gq0"
+          >
+            Hire Designers
+          </p>
+        </a>
+        <div
+          className="chakra-collapse"
+          style={
+            Object {
+              "display": "none",
+              "height": "0px",
+              "marginTop": "0!important",
+              "opacity": 0,
+              "overflow": "hidden",
+            }
+          }
+        >
+          <div
+            className="chakra-stack css-khmogt"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

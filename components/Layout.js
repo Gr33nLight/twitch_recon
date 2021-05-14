@@ -1,7 +1,8 @@
-import React from "react";
-import Nav from "./Nav";
-import { Box } from "@chakra-ui/react";
-import Footer from "./Footer";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Nav from './Nav';
+import { Box } from '@chakra-ui/react';
+import Footer from './Footer';
 
 const Layout = ({ children }) => {
   return (
@@ -13,6 +14,10 @@ const Layout = ({ children }) => {
       <Footer />
     </Box>
   );
+};
+
+Layout.propTypes = {
+  children: PropTypes.element,
 };
 
 export default Layout;
