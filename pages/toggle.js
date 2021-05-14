@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Button,
   Modal,
@@ -8,8 +8,8 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
-} from '@chakra-ui/react';
-import { useDisclosure, useColorMode } from '@chakra-ui/react';
+} from "@chakra-ui/react";
+import { useDisclosure, useColorMode } from "@chakra-ui/react";
 
 const user = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -18,7 +18,7 @@ const user = () => {
   return (
     <>
       <Button onClick={toggleColorMode}>
-        Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
+        Toggle {colorMode === "light" ? "Dark" : "Light"}
       </Button>
       <Button onClick={onOpen}>Open Modal</Button>
       <Modal isOpen={isOpen} onClose={onClose}>

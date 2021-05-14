@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link, Box, IconButton, Icon, Text } from '@chakra-ui/react';
-import { FaTrashAlt } from 'react-icons/fa';
+import React from "react";
+import { Link, Box, Icon, Text } from "@chakra-ui/react";
+import { FaTrashAlt } from "react-icons/fa";
 
 const VodSyncResult = ({ result, setVodResult, setVodUrl }) => {
   return (
@@ -9,18 +9,18 @@ const VodSyncResult = ({ result, setVodResult, setVodUrl }) => {
       bgColor="purple.400"
       width="300px"
       display="inherit"
-      marginTop={['5px', '0px']}
+      marginTop={["5px", "0px"]}
     >
       <Text fontSize="md" color="gray.200" width="100%">
         <Link href={result} isExternal>
-          {result.substr(0, 31) + (result.length > 31 ? '...' : '')}
+          {result.substr(0, 31) + (result.length > 31 ? "..." : "")}
         </Link>
       </Text>
       <Icon
         cursor="pointer"
         onClick={() => {
-          setVodResult('');
-          setVodUrl('');
+          setVodResult("");
+          setVodUrl("");
         }}
         w="5"
         h="5"

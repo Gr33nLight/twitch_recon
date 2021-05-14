@@ -1,20 +1,20 @@
-import Head from 'next/head';
-import { useState } from 'react';
-import { Input, Box, Flex } from '@chakra-ui/react';
-import ChannelSelect from '../components/ChannelSelect';
-import VodSyncResult from '../components/VodSyncResult';
-import Progress from '../components/Progress';
-import { use100vh } from 'react-div-100vh';
+import React from "react";
+import { useState } from "react";
+import { Input, Box, Flex } from "@chakra-ui/react";
+import ChannelSelect from "../components/ChannelSelect";
+import VodSyncResult from "../components/VodSyncResult";
+import Progress from "../components/Progress";
+import { use100vh } from "react-div-100vh";
 
 export default function Home() {
-  const [vodUrl, setVodUrl] = useState('');
-  const [vodResult, setVodResult] = useState('');
+  const [vodUrl, setVodUrl] = useState("");
+  const [vodResult, setVodResult] = useState("");
   const [loading, setLoading] = useState();
   const height = use100vh();
 
   return (
     <Box
-      height={height || '100vh'}
+      height={height || "100vh"}
       //for use with navbar
       // height={`calc(${height}px - 60px)`}
       display="flex"
@@ -26,7 +26,7 @@ export default function Home() {
       <Box display="flex" flexDirection="column" justifyContent="center">
         <Box
           flex="1"
-          fontSize={['40px', null, null, '70px']}
+          fontSize={["40px", null, null, "70px"]}
           alignSelf="center"
         >
           Twitch Recon
@@ -36,20 +36,20 @@ export default function Home() {
 
         <form onSubmit={(e) => e.preventDefault()}>
           <Flex
-            py={'0.5rem'}
-            px={'0rem'}
+            py={"0.5rem"}
+            px={"0rem"}
             flex="1"
-            flexDirection={['column', 'row', 'row', 'row']}
-            justifyContent={'center'}
-            alignItems={'center'}
+            flexDirection={["column", "row", "row", "row"]}
+            justifyContent={"center"}
+            alignItems={"center"}
           >
             <Input
               placeholder="Enter VOD URL"
               value={vodUrl}
               w={[310, 190, 300]}
-              marginBottom={['5px', '0px']}
+              marginBottom={["5px", "0px"]}
               onChange={(e) => {
-                if (vodResult) setVodResult('');
+                if (vodResult) setVodResult("");
                 setVodUrl(e.target.value);
               }}
             />

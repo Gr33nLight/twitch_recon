@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import { FaAngleRight, FaCheck } from 'react-icons/fa';
-import { Box } from '@chakra-ui/react';
-import { motion, useAnimation } from 'framer-motion';
+import React, { useEffect } from "react";
+import { FaAngleRight, FaCheck } from "react-icons/fa";
+import { Box } from "@chakra-ui/react";
+import { motion, useAnimation } from "framer-motion";
 
 const Progress = ({ result, loading }) => {
   const controls = useAnimation();
@@ -18,7 +18,7 @@ const Progress = ({ result, loading }) => {
   }
 
   const loadingStyle = {
-    height: '40px',
+    height: "40px",
   };
 
   if (result) {
@@ -29,7 +29,7 @@ const Progress = ({ result, loading }) => {
           fontSize="1.5em"
           color="green"
           style={{
-            marginLeft: '3px',
+            marginLeft: "3px",
           }}
         />
       </Box>
@@ -57,7 +57,7 @@ const Progress = ({ result, loading }) => {
     return (
       <Box px="5px" display="inline-flex" alignItems="center">
         Sync To
-        <FaAngleRight style={{ height: '18px', marginLeft: '3px' }} />
+        <FaAngleRight style={{ height: "18px", marginLeft: "3px" }} />
       </Box>
     );
   }

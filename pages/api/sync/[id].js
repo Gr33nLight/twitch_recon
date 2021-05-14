@@ -1,7 +1,7 @@
-import { syncVodTo } from '../../../lib';
+import { syncVodTo } from "../../../lib";
 
 const vodSync = (req, res) => {
-  if (req.method === 'POST') {
+  if (req.method === "POST") {
     const { id } = req.query;
     const { timestamp, channel } = req.body;
 
@@ -11,7 +11,7 @@ const vodSync = (req, res) => {
       } else if (vodinfo && vodinfo?.url) {
         res.status(200).json({ success: true, vodinfo });
       } else {
-        res.status(400).json({ success: false, err_code: 'ERR_UNKNOWN' });
+        res.status(400).json({ success: false, err_code: "ERR_UNKNOWN" });
       }
     });
   }
