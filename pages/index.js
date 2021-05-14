@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <Box
-      height={height}
+      height={height || '100vh'}
       //for use with navbar
       // height={`calc(${height}px - 60px)`}
       display="flex"
