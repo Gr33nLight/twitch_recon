@@ -11,7 +11,7 @@ const ChannelSelect = ({ vodUrl, setVodResult, loading, setLoading }) => {
   const sendReq = async () => {
     setLoading(true);
     const duration = String.raw`(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)`;
-    const vId = String.raw`\d\d\d\d\d\d\d\d\d`;
+    const vId = String.raw`\d+`;
 
     const videoWithTimestampRE = new RegExp(`(${vId})(?:\\?t=(${duration}))?`);
 
