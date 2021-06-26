@@ -35,7 +35,7 @@ const VodSyncResult = ({ result, setVodResult, setVodUrl }) => {
 };
 
 VodSyncResult.propTypes = {
-  result: PropTypes.strin,
+  result: PropTypes.string,
   setVodResult: PropTypes.func,
   setVodUrl: PropTypes.func,
 };

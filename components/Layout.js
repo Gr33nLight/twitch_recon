@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Nav from './Nav';
+// import Nav from './Nav';
 import { Box } from '@chakra-ui/react';
 import Footer from './Footer';
 

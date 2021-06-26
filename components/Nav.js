@@ -30,7 +30,7 @@ import {
 // } from '@chakra-ui/icons';
 
 const Nav = () => {
-  const { isOpen, onToggle } = useDisclosure();
+  const { isOpen } = useDisclosure();
 
   return (
     <Box>
